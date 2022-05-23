@@ -1,0 +1,12 @@
+[Unit]
+Description=Serves timelapse files
+After=network.target
+
+[Service]
+Restart=always
+RestartSec=1
+ExecStart=/bin/bash /etc/motion/server.sh
+User=jpoles1
+
+[Install]
+WantedBy=multi-user.target
